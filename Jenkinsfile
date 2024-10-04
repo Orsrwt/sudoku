@@ -6,14 +6,14 @@ pipeline {
         checkout scm
       }
     }
-    stage(' Build-and-Tag') {
-      steps {
-        sh 'echo Build-and-Tag'
-      }
-    }
     stage('SAST') {
       steps {
         sh 'echo SAST stage'
+      }
+    }
+    stage('Build-and-Tag') {
+      steps {
+        sh 'echo Build-and-Tag'
       }
     }
     stage('Post-to-dockerhub') {

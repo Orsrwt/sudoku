@@ -1,4 +1,4 @@
-node ('agent1') {
+node('agent1') {
   def app
   stage('Cloning Git') {
     checkout scm
@@ -12,8 +12,7 @@ node ('agent1') {
     }
   }
   stage('Pull-image-server') {
-    sh "docker-compose down"
-    sh "docker-compose up -d"
+    sh "docker-compose down" 
+    sh "docker-compose up -d" 
   }
 }
-  
